@@ -22,7 +22,15 @@ p{
 
 header{
     background-color: #EAC926;
-    width: 100%;
+    width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.banner{
+    width: 90%;
+    margin: auto;
+    display: block;
 }
 
 header .top-header{
@@ -40,8 +48,6 @@ header div.logo{
     
 }
 
-
-
 header nav{
     font-size: 12px;
 }
@@ -57,14 +63,23 @@ header ul li a{
     color: #000;
 }
 /* form es solo barra de busqueda + icono, formato del flex*/
-header .form{
+header .form {
     display: flex;
     align-items: stretch;
-    justify-content: center;
+    justify-content: stretch;
     height: 80%;
     border-radius: 5px;
     font-size: 80%;
+}
 
+header .form input{
+    background-color: #FFF;
+    border: 1px solid #fff;
+    outline: none;
+    color: #666;
+    padding: 2px;
+    border-radius: 5px;
+    width: 100%;
 }
 
 /* form formato del texto */
@@ -124,6 +139,8 @@ h3, .description{
 .description{
     display: none;
     margin-top: 20px;
+    transition-property: display;
+    transition-duration: 5s;
 }
 
 section.banner img{
@@ -162,6 +179,11 @@ main section article i{
     position: absolute; 
     right: 20px;
     top: -15px;
+}
+
+main section article i:hover{
+    transform: rotate(-90deg);
+    transition-duration: 500ms;
 }
 
 
@@ -240,6 +262,7 @@ form{
 .register{
     padding-top: 0px;
 
+
 }
 
 
@@ -316,18 +339,69 @@ form{
 /*Formulario login*/
 
 .login{
-    margin: 0 auto;
+    background-color: white;
+    margin: auto;
 }
+
+main .tarjeta-inicio{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 0rem;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.tarjeta-inicio-header{
+    margin: 1.875rem 0 0rem;
+}
+
+.inicio-titulo{
+    color: rgba(0,0,0,.9);
+    font-size: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: .0125rem;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+main div.usuario{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 
+    100%;
+}
+
+.boton-enviar{
+    margin-top: 10px;
+}
+
+.boton-enviar button:hover{
+    background-color: #0022AA;
+    color: white;
+}
+
+
+
+
 
 /* media query*/
 @media (min-width: 361px){
     main section article .description{
-        display: block;
+        display: none;
     }
 
-    main section article{
+    main section article:hover .description{
+        display: block;
+
+    }
+
+    main section article:hover{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        width: 49%;
+        
     }
 
     header div.top-header p {
@@ -361,7 +435,7 @@ form{
         display: flex;
         padding: 20px;
         align-items: center;
-        font-size: 14px;
+        font-size: 120%;
     }
 
     header .top-header{
@@ -382,14 +456,20 @@ form{
     
 }
 
-
-
-
 @media (min-width: 769px){
     main section article{
         width: 23%;
+        max-width: 1200px;
     }
+
+    .footer-0{
+        display: flex;
+    }
+
+
 }
+
+
 
 
 
