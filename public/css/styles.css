@@ -452,6 +452,10 @@ main div.usuario{
     main section .discount{
         width: 50%;
     }
+
+    footer div section i:hover {
+        color: green;
+    }
     
     
 }
